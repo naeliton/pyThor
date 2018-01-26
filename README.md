@@ -6,6 +6,7 @@ Geolocalização pro sistema winthor
 * \Sintegra
 Cadastro de cliente pela Sefaz Ce
 
+
 ### Versão BETA
 
 Visão geral
