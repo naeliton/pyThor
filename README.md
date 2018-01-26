@@ -3,5 +3,5 @@
 
 ### Projeto BETA
 
-* ** Pequeno projeto pra facilitar o cadastro de latitude e longitude**
-* ** no sistema Wnithor **
+**Pequeno projeto pra facilitar o cadastro de latitude e longitude**
+**no sistema Wnithor **
