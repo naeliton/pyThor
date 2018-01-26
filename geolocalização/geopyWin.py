@@ -1,10 +1,23 @@
 import cx_Oracle
 
-TNS = cx_Oracle.makedsn("192.168.0.3", "1521", "WINT")
+#TNSnames.ora
 
-con = cx_Oracle.connect(user="dsl", password="dsl", dsn=TNS)
-#print(con.version)
-#abre o cursor
+#ORCL =
+#  (DESCRIPTION =
+#    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+#    (CONNECT_DATA =
+#      (SERVICE_NAME = orcl)
+#    )
+#  )
+# ("Ip_servidor" ,"Porta", "Serviço")
+
+TNS = cx_Oracle.makedsn("localhost", "1521", "orcl")
+
+con = cx_Oracle.connect(user="usuariobd", password="senhabd", dsn=TNS)
+
+
+# print(con.version)
+# abre o cursor
 class Pesquisa():
     codcli = input(('escolha um codigo'))
     cur = con.cursor()
@@ -20,5 +33,3 @@ class Pesquisa():
     cur.close()
     con.close()
     print('pesquisando')
-
-

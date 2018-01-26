@@ -1,6 +1,6 @@
 import cx_Oracle
-import geoPEsquisa
-import geopyWin
+from pyThorGeo.geolocalização import geoPEsquisa
+from pyThorGeo.geolocalização import geopyWin
 
 TNS = cx_Oracle.makedsn("192.168.0.3", "1521", "WINT")
 con = cx_Oracle.connect(user="dsl", password="dsl", dsn=TNS)
