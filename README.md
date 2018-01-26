@@ -32,6 +32,7 @@ Cadastro de cliente pela Sefaz Ce
               Etapas
 ----------------------------------
 1-Consulta na sefaz -- ✓
+1-Extrair Dados -- X
 2-Conexao com BD -- X
 3-ligacao dos campos da consulta com BD -- X
 4-Insert -- X
