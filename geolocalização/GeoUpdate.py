@@ -3,6 +3,7 @@ from pyThorGeo.geolocalização import geoPEsquisa
 from pyThorGeo.geolocalização import geopyWin
 
 TNS = cx_Oracle.makedsn("localhost", "1521", "orcl")
+
 con = cx_Oracle.connect(user="dsl", password="dsl", dsn=TNS)
 latitude = geoPEsquisa.latitude
 longitude = geoPEsquisa.longitude
