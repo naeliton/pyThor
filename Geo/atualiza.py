@@ -1,13 +1,13 @@
 import cx_Oracle
-from pyThorGeo.geolocalização import geoPEsquisa
-from pyThorGeo.geolocalização import geopyWin
+from pyThor.Geo import pesquisa
+from pyThor.Geo import conecta
 
 TNS = cx_Oracle.makedsn("localhost", "1521", "orcl")
 
 con = cx_Oracle.connect(user="dsl", password="dsl", dsn=TNS)
-latitude = geoPEsquisa.latitude
-longitude = geoPEsquisa.longitude
-codcli = geopyWin.Pesquisa.codcli
+latitude = pesquisa.latitude
+longitude = pesquisa.longitude
+codcli = conecta.Pesquisa.codcli
 
 cur = con.cursor()
 statement = 'update pcclient_bkp set latitude = :latitude, longitude =:longitude where codcli = :codcli'

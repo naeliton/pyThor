@@ -1,5 +1,5 @@
 import googlemaps
-from .geopyWin import Pesquisa
+from .conecta import Pesquisa
 
 API_Key = 'AIzaSyBvRhvRYNv0iI-OM0UJ70DIOnmjlsQm4Ks'
 
