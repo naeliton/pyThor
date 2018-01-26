@@ -1,6 +1,5 @@
 # pyThor
-```
-```
+--------------------------------------------
 ### Versão BETA
 
 ## Visão geral
@@ -14,7 +13,8 @@ no sistema Winthor.
 
 *\Geo*
 ```
-Geolocalização pro sistema winthor
+Cadastro de latitude e longitude pelo codigo do cliente
+
 ```
 
 *\Sintegra*
