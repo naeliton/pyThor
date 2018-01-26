@@ -16,7 +16,7 @@ cur.execute(statement, (latitude,longitude, codcli))
 con.commit()
 cur.close()
 con.close()
-print('Number of rows updated: ' + str(cur.rowcount))
+print('Número de linhas atualizadas: ' + str(cur.rowcount))
 print(' ')
 
 
