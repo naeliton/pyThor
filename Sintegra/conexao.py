@@ -1,8 +1,9 @@
 import cx_Oracle
+from pyThor.Sintegra import ConsultarCnpj
 
-#TNSnames.ora
+# TNSnames.ora
 
-#ORCL =
+# ORCL =
 #  (DESCRIPTION =
 #    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
 #    (CONNECT_DATA =
@@ -18,18 +19,18 @@ con = cx_Oracle.connect(user="user", password="pass", dsn=TNS)
 
 # print(con.version)
 # abre o cursor
-class Pesquisa():
-    codcli = input(('escolha um codigo'))
+class Busca():
+    cgcent = ConsultarCnpj._mask_cnpj
     cur = con.cursor()
-    cur.prepare('select enderent,numeroent,bairroent,municent,estent,cepent from pcclient_bkp where codcli = :codcli')
-    cur.execute(None, {'codcli': codcli})
-    row = cur.fetchall()[0]
-    endereco = row
-    numero = row[1]
-    bairro = row[2]
-    cidade = row[3]
-    estado = row[4]
-    cep = row[4]
+    cur.prepare('select codcli,cliente from pcclient_bkp where cgcent = :cgcent')
+    cur.execute(None, {':cgcent': cgcent})
+    row = cur.fetchall()
+    dados = len(row)
     cur.close()
     con.close()
-    print('pesquisando')
+    #print(dados)
+
+
+
+
+

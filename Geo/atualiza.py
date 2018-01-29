@@ -2,9 +2,9 @@ import cx_Oracle
 from pyThor.Geo import pesquisa
 from pyThor.Geo import conecta
 
-TNS = cx_Oracle.makedsn("localhost", "1521", "orcl")
+TNS = cx_Oracle.makedsn("host", "port", "service")
 
-con = cx_Oracle.connect(user="dsl", password="dsl", dsn=TNS)
+con = cx_Oracle.connect(user="user", password="pass", dsn=TNS)
 latitude = pesquisa.latitude
 longitude = pesquisa.longitude
 codcli = conecta.Pesquisa.codcli

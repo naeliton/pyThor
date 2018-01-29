@@ -44,6 +44,7 @@ soup_resultado = BeautifulSoup(resultado, "html.parser")
 
 
 lista_td = soup_resultado.find('body')
+somente_cnpj = soup_resultado.find('body')
 
 
 dados = []
@@ -77,17 +78,13 @@ cep = cep.replace(' ','')
 #fim
 telefone = dados[10]
 situacao = dados[13]
+op_simples = dados[22]
 
-print(cnpj)
-print(ie)
-print(razao)
-print(ender)
-print(num)
-print(bairro)
-print(cidade)
-print(cep)
-print(telefone)
+_mask_cnpj = (cnpj[0:2]+'.'+cnpj[2:5]+'.'+cnpj[5:8]+'/'+cnpj[8:12]+'-'+cnpj[12:14])
+#12.122.518/0001-87 12122518000187
 
-print(dados)
+
+
+
 
 
