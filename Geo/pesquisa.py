@@ -1,5 +1,5 @@
 import googlemaps
-from .conecta import Pesquisa
+from conecta import Pesquisa
 
 API_Key = 'AIzaSyBvRhvRYNv0iI-OM0UJ70DIOnmjlsQm4Ks'
 
@@ -21,7 +21,7 @@ longitude = geocode_result['geometry']['location']['lng']
 
 print('Latitude e longitude')
 print(latitude, longitude)
-print('Endereço')
+print('Endereco')
 print(endereco)
 
 

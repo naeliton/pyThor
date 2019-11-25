@@ -11,9 +11,9 @@ import cx_Oracle
 #  )
 # ("Ip_servidor" ,"Porta", "Serviço")
 
-TNS = cx_Oracle.makedsn("host", "port", "service")
+TNS = cx_Oracle.makedsn("187.44.254.2", "1521", "WINT")
 
-con = cx_Oracle.connect(user="user", password="pass", dsn=TNS)
+con = cx_Oracle.connect(user="MASTERFRIOS", password="M4ST3RFR10S", dsn=TNS)
 
 
 # print(con.version)
@@ -21,10 +21,11 @@ con = cx_Oracle.connect(user="user", password="pass", dsn=TNS)
 class Pesquisa():
     codcli = input(('escolha um codigo'))
     cur = con.cursor()
-    cur.prepare('select enderent,numeroent,bairroent,municent,estent,cepent from pcclient_bkp where codcli = :codcli')
+    cur.prepare('select enderent,numeroent,bairroent,municent,estent,cepent from pcclient where codcli = :codcli')
     cur.execute(None, {'codcli': codcli})
     row = cur.fetchall()[0]
     endereco = row
+    print(endereco)
     numero = row[1]
     bairro = row[2]
     cidade = row[3]
